@@ -26,7 +26,7 @@ export default function Login({ setIsLoggedIn, setUserRole }) {
 
     try {
       const response = await axios.post(
-        "https://genzfashion-umr7.onrender.com/api/auth/login",
+        "https://shopping-17fm.onrender.com/api/auth/login",
         form,
         {
           withCredentials: true,

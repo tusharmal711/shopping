@@ -23,7 +23,7 @@ export default function OrderSuccess()
       }
       try {
         await axios.post(
-          `https://genzfashion-umr7.onrender.com/api/review/${productId}`,
+          `https://shopping-17fm.onrender.com/api/review/${productId}`,
           { rating, comment },
           { withCredentials: true }
         );

@@ -14,7 +14,7 @@ export default function ProductAdmin() {
   const fetchProducts = async () => {
     try {
       const res = await axios.get(
-        "https://genzfashion-umr7.onrender.com/api/products/all"
+        "https://shopping-17fm.onrender.com/api/products/all"
       );
       setProducts(res.data);
     } catch (err) {
@@ -33,8 +33,8 @@ export default function ProductAdmin() {
       product.images.forEach((img) => formData.append("images", img));
 
       const url = isUpdating
-        ? `https://genzfashion-umr7.onrender.com/api/products/update/${editProduct._id}`
-        : "https://genzfashion-umr7.onrender.com/api/products/add";
+        ? `https://shopping-17fm.onrender.com/api/products/update/${editProduct._id}`
+        : "https://shopping-17fm.onrender.com/api/products/add";
 
       const method = isUpdating ? axios.put : axios.post;
 
@@ -62,7 +62,7 @@ export default function ProductAdmin() {
       return;
     try {
       await axios.delete(
-        `https://genzfashion-umr7.onrender.com/api/products/delete/${id}`
+        `https://shopping-17fm.onrender.com/api/products/delete/${id}`
       );
       fetchProducts();
       setMessage("🗑️ Product deleted!");

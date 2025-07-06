@@ -49,7 +49,7 @@ export default function Register() {
 
     try {
       const response = await axios.post(
-        "https://genzfashion-umr7.onrender.com/api/auth/register",
+        "https://shopping-17fm.onrender.com/api/auth/register",
         form
       );
       setError("");

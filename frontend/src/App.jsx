@@ -23,7 +23,7 @@ function App() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "https://genzfashion-umr7.onrender.com/api/auth/logout",
+        "https://shopping-17fm.onrender.com/api/auth/logout",
         {},
         {
           withCredentials: true,
@@ -46,7 +46,7 @@ function App() {
       }
       try {
         const res = await axios.get(
-          "https://genzfashion-umr7.onrender.com/api/cart",
+          "https://shopping-17fm.onrender.com/api/cart",
           {
             withCredentials: true,
           }

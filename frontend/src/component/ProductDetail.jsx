@@ -16,7 +16,7 @@ export default function ProductDetails({ isLoggedIn, setCartItems }) {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get(`https://genzfashion-umr7.onrender.com/api/products/${id}`)
+      .get(`https://shopping-17fm.onrender.com/api/products/${id}`)
       .then((res) => setProduct(res.data))
       .catch((err) => console.error("Product not found", err));
   }, [id]);
@@ -25,7 +25,7 @@ export default function ProductDetails({ isLoggedIn, setCartItems }) {
     const fetchReviews = async () => {
       try {
         const res = await axios.get(
-          `https://genzfashion-umr7.onrender.com/api/review/${id}`
+          `https://shopping-17fm.onrender.com/api/review/${id}`
         );
         setReviews(res.data.reviews);
 
@@ -75,7 +75,7 @@ export default function ProductDetails({ isLoggedIn, setCartItems }) {
     }
     try {
       const res = await axios.post(
-        "https://genzfashion-umr7.onrender.com/api/cart/add",
+        "https://shopping-17fm.onrender.com/api/cart/add",
         { productId: product._id, size: selectedSize, quantity: quantity },
         { withCredentials: true }
       );
@@ -84,7 +84,7 @@ export default function ProductDetails({ isLoggedIn, setCartItems }) {
       setMessageType("success");
       setTimeout(() => setMessage(""), 3000);
       const cartRes = await axios.get(
-        "https://genzfashion-umr7.onrender.com/api/cart",
+        "https://shopping-17fm.onrender.com/api/cart",
         {
           withCredentials: true,
         }

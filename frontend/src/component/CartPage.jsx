@@ -10,7 +10,7 @@ export default function CartPage({setCartItems}) {
     const fetchCart = async () => {
       try {
         const res = await axios.get(
-          "https://genzfashion-umr7.onrender.com/api/cart",
+          "https://shopping-17fm.onrender.com/api/cart",
           {
             withCredentials: true,
           }
@@ -63,7 +63,7 @@ export default function CartPage({setCartItems}) {
   const handleRemove = async (item) => {
     try {
       await axios.post(
-        "https://genzfashion-umr7.onrender.com/api/cart/remove",
+        "https://shopping-17fm.onrender.com/api/cart/remove",
         {
           productId: item.productId._id,
           size: item.size,
@@ -73,7 +73,7 @@ export default function CartPage({setCartItems}) {
         }
       );
       const res = await axios.get(
-        "https://genzfashion-umr7.onrender.com/api/cart",
+        "https://shopping-17fm.onrender.com/api/cart",
         {
           withCredentials: true,
         }
