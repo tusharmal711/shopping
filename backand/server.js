@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://shopping-beta-three.vercel.app",
+    origin: "https://genzstyle.vercel.app",
     credentials: true,
   })
 );
